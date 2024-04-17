@@ -1,4 +1,4 @@
-const notesmodel = require("../model/notesmodel.js");
+const notesmodel = require("../model/notesModel.js");
 const authmodel = require('../model/authModel.js');
 const datamodel = require('../model/userNotes.js');
 
