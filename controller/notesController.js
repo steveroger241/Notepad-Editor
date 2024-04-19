@@ -4,13 +4,6 @@ const datamodel = require('../model/userNotes.js');
 
 async function postNotesController(req, res) {
     try {
-        let notesfind = await notesmodel.findOne({ data: req.body.data });
-        if (notesfind) {
-            return res.send({
-                success: false,
-                error: "Data already exist"
-            })
-        }
         let notes = await notesmodel.create({ data: req.body.data });
 
         let user = await authmodel.findOne({ email: req.body.email });
